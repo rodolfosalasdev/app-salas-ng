@@ -3,6 +3,7 @@
   "schematics": {
     "@schematics/angular:component": {
       "standalone": true,
+      "inlineStyle": true,
       "changeDetection": "OnPush"
     }
   },
