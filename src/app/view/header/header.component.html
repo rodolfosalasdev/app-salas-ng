@@ -1,3 +1,8 @@
+<!-- <div class="flex items-center h-10 bg-slate-950 text-white">
+  <span class="uppercase ml-4">Salas |</span>
+  <span class="ml-4">rodolfosalas.dev</span>
+</div> -->
+
 <nav class="navbar bg-body-tertiary fixed-top">
   <div class="container-fluid">
     <a
@@ -17,9 +22,10 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <span class="uppercase ml-2">Salas |</span>
-      <span class="ml-4">rodolfosalas.dev</span>
+      <!-- <span class="uppercase ml-2">Salas |</span>
+      <span class="ml-4">rodolfosalas.dev</span> -->
     </a>
+
     <button
       class="mr-4"
       type="button"
@@ -61,34 +67,56 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/" routerLinkActive="is-active">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="/"
+              routerLinkActive="is-active"
+            >
               <div class="flex flex-row hover:text-slate-300">
-                  <i class="bi bi-house flex align-top" style="font-size: 20px;"></i>
-                <span class="ml-2 ">| Home</span>
+                <i
+                  class="bi bi-house flex align-top"
+                  style="font-size: 20px"
+                ></i>
+                <span class="ml-2">| Home</span>
               </div>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{URL.github}}">
+            <a class="nav-link" href="{{ URL.github }}">
               <div class="flex flex-row hover:text-slate-300">
-                <i class="bi bi-github flex align-top" style="font-size: 20px;"></i>
+                <i
+                  class="bi bi-github flex align-top"
+                  style="font-size: 20px"
+                ></i>
                 <span class="ml-2 hover:text-slate-300">| GitHub</span>
               </div>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{URL.linkedin}}">
+            <a class="nav-link" href="{{ URL.linkedin }}">
               <div class="flex flex-row hover:text-slate-300">
-                <i class="bi bi-linkedin flex align-top" style="font-size: 20px;"></i>
+                <i
+                  class="bi bi-linkedin flex align-top"
+                  style="font-size: 20px"
+                ></i>
                 <span class="ml-2 hover:text-slate-300">| LinkedIn</span>
               </div>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="/messenger" routerLinkActive="is-active">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              routerLink="/notes"
+              routerLinkActive="is-active"
+            >
               <div class="flex flex-row hover:text-slate-300">
-                <i class="bi bi-card-text flex align-top" style="font-size: 20px;"></i>
-                <span class="ml-2 hover:text-slate-300">| Messenger</span>
+                <i
+                  class="bi bi-card-text flex align-top"
+                  style="font-size: 20px"
+                ></i>
+                <span class="ml-2 hover:text-slate-300">| Notes</span>
               </div>
             </a>
           </li>
@@ -136,7 +164,9 @@
               <li>
                 <hr class="dropdown-divider" />
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
             </ul>
           </li>
         </ul>
