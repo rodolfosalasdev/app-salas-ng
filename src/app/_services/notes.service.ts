@@ -11,7 +11,7 @@ export class NotesService {
 
   public http = inject(HttpClient);
 
-  public createNotes(notes: INotes): Observable<INotes> {
+  public postNotes(notes: INotes): Observable<INotes> {
     return this.http.post<INotes>(urlConfig.notesAPI, notes).pipe(
       map((value) => value)
     )
