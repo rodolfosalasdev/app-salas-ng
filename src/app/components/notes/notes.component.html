@@ -1,1 +1,9 @@
-<app-create-notes></app-create-notes>
+<div class="flex w-full">
+    <div class="w-1/4 mt-1">
+        <app-read-notes></app-read-notes>
+    </div>
+    <div class="w-3/4 mt-4">
+        <app-create-notes (dataCreateNote)="createNotes($event)"></app-create-notes>
+    </div>
+
+</div>

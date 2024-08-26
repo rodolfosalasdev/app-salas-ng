@@ -1,19 +1,16 @@
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { NotesService } from '../../../_services/notes.service';
+import { ChangeDetectionStrategy, Component, EventEmitter, inject, Output } from "@angular/core";
+import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
 
 @Component({
-  selector: 'app-create-notes',
+  selector: "app-create-notes",
   standalone: true,
   imports: [ReactiveFormsModule],
-  templateUrl: './create-notes.component.html',
-  styles: ``,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  templateUrl: "./create-notes.component.html",
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreateNotesComponent {
-
+  @Output() public dataCreateNote = new EventEmitter<any>();
   private formBuilder = inject(FormBuilder);
-  private notesService = inject(NotesService);
 
   protected form = this.formBuilder.group({
     titleNote: [null, Validators.required],
@@ -21,9 +18,8 @@ export class CreateNotesComponent {
   });
 
   onSubmit(form: any): void {
-    //criar e enviar o form para o serviço
-    this.notesService.createNotes(form).subscribe();
-    console.log('form', form);
+    this.dataCreateNote.emit(form);
+    
     this.form.controls.note.setValue(null);
     this.form.controls.titleNote.setValue(null);
   }
