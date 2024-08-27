@@ -16,4 +16,10 @@ export class NotesService {
       map((value) => value)
     )
   }
+
+  public getNotes(): Observable<INotes[]> {
+    return this.http.get<INotes[]>(urlConfig.notesAPI).pipe(
+      map((value) => value)
+    )
+  }
 }

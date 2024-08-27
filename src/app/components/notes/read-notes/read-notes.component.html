@@ -1,1 +1,16 @@
-<p>read-notes works!</p>
+<div class="h-full border-r-2 border-b-2">
+  <div *ngIf="notes$ | async as notes; else loadingError">
+    <div *ngFor="let note of notes" class="card text-bg-secondary mt-1 ml-1">
+      <div class="card-body">
+        <h5 class="card-title">{{ note.titleNote }}</h5>
+        <p class="card-text">{{ note.note }}</p>
+      </div>
+    </div>
+  </div>
+  <ng-template #loadingError>
+    <div *ngIf="error$ | async; else loading">Erro no carregamento</div>
+    <ng-template #loading>
+      <span>Carregando...</span>
+    </ng-template>
+  </ng-template>
+</div>
